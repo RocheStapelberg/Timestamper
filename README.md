@@ -5,4 +5,4 @@ API endpoint sits at /api/:time.
 
 Where time is a time in unix or in the format of yyyy-mm-dd.
 
-Create for the freeCodeCamp Back End Development and APIs certification.
+Created for the freeCodeCamp Back End Development and APIs certification.
