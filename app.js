@@ -11,6 +11,8 @@ assetPath = __dirname + "/Public";
 app.use("/public", express.static(assetPath));
 app.use(express.json());
 
+const timeStampRouter = require('./routes/timestamper');
+
 // Serving front-page
 app.get('/', (req, res) => {
     let now = new Date();
@@ -18,6 +20,9 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/views/index.html')
 });
 
+app.use('/api', timeStampRouter)
+
 app.listen(PORT, HOST, () => {
     console.log(`Listening on http://${HOST}:${PORT}`);
 });
+
